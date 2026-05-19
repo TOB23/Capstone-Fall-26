@@ -2,22 +2,21 @@
   {
     "utility_id": "FPL",
     "utility_name": "Florida Power & Light",
-    "platform": "countyjson",
+    "platform": "kubra",
     "states": [
       "FL"
     ],
     "customers_served": 5800000,
-    "enabled": true,
+    "enabled": false,
     "_priority_rank": 1,
-    "_outage_map_url": "https://www.fplmaps.com/",
-    "_comment": "VERIFIED. countyjson feed; live as of registry build.",
+    "_outage_map_url": "https://www.fpl.com/outages/power-tracker.html",
+    "_comment": "VERIFY in notebook 01: open _outage_map_url, DevTools > Network, capture real endpoints, fill config, then set enabled:true.",
     "config": {
-      "feed_url": "https://www.fplmaps.com/customer/outage/CountyOutages.json",
-      "records_key": "outages",
-      "county_field": "County Name",
-      "customers_field": "Customers Out",
-      "served_field": "Customers Served",
-      "state": "FL"
+      "metadata_url": "FILL-ME via DevTools",
+      "tile_url_template": "FILL-ME via DevTools",
+      "min_zoom": 1,
+      "max_zoom": 14,
+      "seed_quadkeys": []
     }
   },
   {

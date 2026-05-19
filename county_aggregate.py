@@ -8,10 +8,15 @@ verification set is directly comparable to the model's training labels:
     python county_aggregate.py                       # all snapshots
     python county_aggregate.py --start 2026-09-01    # a date window
 
-Point-geometry records are spatially joined to county polygons. Records with no
-geometry (a utility that reports only a service-area name) need a per-utility
-area->FIPS crosswalk; until you supply one they are reported and dropped, so
-the coverage gap is visible rather than silent.
+Records reach a county FIPS one of two ways:
+  * point-geometry records (KUBRA, ArcGIS) are spatially joined to county
+    polygons using lat/lon;
+  * county-level records (the countyjson platform) already carry their FIPS
+    as "FIPS:xxxxx" in area_name and skip the spatial join entirely.
+
+Records with neither (a utility reporting only a service-area name) need a
+per-utility area->FIPS crosswalk; until one exists they are reported and
+dropped, so the coverage gap is visible rather than silent.
 """
 from __future__ import annotations
 
@@ -38,33 +43,55 @@ def load_snapshots(start: str | None = None, end: str | None = None) -> pd.DataF
 
 
 def place_in_counties(df: pd.DataFrame) -> pd.DataFrame:
-    """Spatial-join point records to county FIPS codes."""
+    """Attach a county FIPS to every record.
+
+    countyjson records arrive pre-resolved (area_name == "FIPS:xxxxx"); they
+    skip the spatial join. Point records are spatially joined on lat/lon.
+    """
     if not COUNTY_SHAPEFILE.exists():
         raise SystemExit(
             f"County shapefile not found at {COUNTY_SHAPEFILE}.\n"
             "Download the Census cartographic county boundaries "
-            "(cb_2023_us_county_500k) and unzip into that folder.")
+            "(cb_2025_us_county_500k) and unzip into that folder.")
 
-    counties = gpd.read_file(COUNTY_SHAPEFILE)[["GEOID", "geometry"]]
-    counties = counties.rename(columns={"GEOID": "fips"}).to_crs(4326)
+    area = df["area_name"].astype("string").fillna("")
+    pre_resolved_mask = area.str.startswith("FIPS:")
 
-    points = df.dropna(subset=["latitude", "longitude"]).copy()
-    no_geom = len(df) - len(points)
+    # --- Path A: records that already carry their FIPS ---
+    pre = df[pre_resolved_mask].copy()
+    if not pre.empty:
+        pre["fips"] = pre["area_name"].str.slice(5).str.zfill(5)
+        print(f"  {len(pre)} record(s) used a pre-resolved county FIPS "
+              f"(countyjson feeds).")
+
+    # --- Path B: point records spatially joined on lat/lon ---
+    rest = df[~pre_resolved_mask]
+    points = rest.dropna(subset=["latitude", "longitude"]).copy()
+    no_geom = len(rest) - len(points)
     if no_geom:
-        print(f"  note: {no_geom} records had no point geometry "
-              f"(service-area-only utilities) and were not placed.")
+        print(f"  note: {no_geom} record(s) had neither geometry nor a "
+              f"pre-resolved FIPS and were not placed.")
 
-    gdf = gpd.GeoDataFrame(
-        points,
-        geometry=gpd.points_from_xy(points["longitude"], points["latitude"]),
-        crs=4326,
-    )
-    joined = gpd.sjoin(gdf, counties, how="inner", predicate="within")
-    outside = len(points) - len(joined)
-    if outside:
-        print(f"  note: {outside} points fell outside US county polygons.")
-    return pd.DataFrame(joined.drop(columns=["geometry", "index_right"],
-                                    errors="ignore"))
+    joined = pd.DataFrame()
+    if not points.empty:
+        counties = gpd.read_file(COUNTY_SHAPEFILE)[["GEOID", "geometry"]]
+        counties = counties.rename(columns={"GEOID": "fips"}).to_crs(4326)
+        gdf = gpd.GeoDataFrame(
+            points,
+            geometry=gpd.points_from_xy(points["longitude"], points["latitude"]),
+            crs=4326,
+        )
+        sj = gpd.sjoin(gdf, counties, how="inner", predicate="within")
+        outside = len(points) - len(sj)
+        if outside:
+            print(f"  note: {outside} point(s) fell outside US county polygons.")
+        joined = pd.DataFrame(sj.drop(columns=["geometry", "index_right"],
+                                      errors="ignore"))
+
+    combined = pd.concat([pre, joined], ignore_index=True)
+    if combined.empty:
+        raise SystemExit("No records could be placed into counties.")
+    return combined
 
 
 def aggregate_to_county_hour(df: pd.DataFrame) -> pd.DataFrame:

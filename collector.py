@@ -24,12 +24,14 @@ import pandas as pd
 
 from config import (REGISTRY_PATH, SNAPSHOT_DIR, MIN_DELAY_PER_HOST,
                     COLLECTION_INTERVAL)
-from Code.base import build_session
+from base import build_session
 from kubra import KubraAdapter
-from Code.arcgis import ArcGISAdapter
+from arcgis import ArcGISAdapter
+from countyjson import CountyJsonAdapter
 
 # Register new platform adapters here.
-ADAPTERS = {"kubra": KubraAdapter, "arcgis": ArcGISAdapter}
+ADAPTERS = {"kubra": KubraAdapter, "arcgis": ArcGISAdapter,
+            "countyjson": CountyJsonAdapter}
 
 SNAPSHOT_COLUMNS = ["utility_id", "observed_at", "customers_out", "latitude",
                     "longitude", "area_name", "source_platform", "raw_id"]

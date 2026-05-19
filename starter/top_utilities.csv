@@ -1,0 +1,105 @@
+rank,utility_id,utility_name,parent,states,customers_k,platform_guess,outage_map_url
+1,FPL,Florida Power & Light,NextEra Energy,FL,5800,kubra,https://www.fpl.com/outages/power-tracker.html
+2,PGE_CA,Pacific Gas & Electric,PG&E Corp,CA,5500,kubra,https://pgealerts.alerts.pge.com/outage-center/
+3,SCE,Southern California Edison,Edison International,CA,5200,kubra,https://www.sce.com/outage-center/check-outage-status
+4,COMED,Commonwealth Edison (ComEd),Exelon,IL,4100,kubra,https://www.comed.com/outages/check-outage-status
+5,ONCOR,Oncor Electric Delivery,Sempra,TX,4000,kubra,https://stormcenter.oncor.com/
+6,CONED,Consolidated Edison,Con Edison Inc,NY,3600,arcgis,https://www.coned.com/en/outage-maps
+7,DUKE_CAROLINAS,Duke Energy Carolinas,Duke Energy,"NC,SC",2900,kubra,https://www.duke-energy.com/outages/current-outages
+8,GA_POWER,Georgia Power,Southern Company,GA,2900,kubra,https://outagemap.georgiapower.com/
+9,CENTERPOINT,CenterPoint Energy Houston Electric,CenterPoint Energy,TX,2700,kubra,https://tracker.centerpointenergy.com/
+10,VA_POWER,Virginia Electric Power (Dominion),Dominion Energy,"VA,NC",2700,kubra,https://outagemap.dominionenergy.com/
+11,DTE,DTE Electric,DTE Energy,MI,2300,kubra,https://www.newlook.dteenergy.com/wps/wcm/connect/dte-web/outage
+12,PSEG,PSE&G,Public Service Enterprise Group,NJ,2300,kubra,https://outagecenter.pseg.com/
+13,CONSUMERS,Consumers Energy,CMS Energy,MI,1900,kubra,https://www.consumersenergy.com/outage-center/outage-map
+14,DUKE_FLORIDA,Duke Energy Florida,Duke Energy,FL,1900,kubra,https://www.duke-energy.com/outages/current-outages
+15,DUKE_PROGRESS,Duke Energy Progress,Duke Energy,"NC,SC",1700,kubra,https://www.duke-energy.com/outages/current-outages
+16,NATGRID_NY,National Grid (New York),National Grid,NY,1700,kubra,https://www.nationalgridus.com/outages/
+17,PECO,PECO Energy,Exelon,PA,1700,kubra,https://www.peco.com/outages/check-outage-status
+18,XCEL_NORTH,Xcel Energy (Northern States Power),Xcel Energy,"MN,WI,ND,SD",1700,kubra,https://www.xcelenergy.com/outage_and_emergency/view_outage_map
+19,AEP_OHIO,AEP Ohio,American Electric Power,OH,1500,kubra,https://www.aepohio.com/outages/map
+20,ALABAMA_POWER,Alabama Power,Southern Company,AL,1500,kubra,https://www.outagemap.alabamapower.com/
+21,EVERSOURCE_MA,Eversource (Massachusetts),Eversource Energy,MA,1500,kubra,https://outagemap.eversource.com/
+22,LADWP,Los Angeles Dept of Water & Power,Municipal,CA,1500,arcgis,https://www.ladwp.com/account/outages/power-outages
+23,PPL_PA,PPL Electric Utilities,PPL Corp,PA,1500,kubra,https://www.pplelectric.com/outages/
+24,XCEL_PSCO,Xcel Energy (Public Service Co of Colorado),Xcel Energy,CO,1500,kubra,https://www.xcelenergy.com/outage_and_emergency/view_outage_map
+25,APS,Arizona Public Service,Pinnacle West,AZ,1400,kubra,https://www.aps.com/en/Outages/Outage-Map
+26,SDGE,San Diego Gas & Electric,Sempra,CA,1400,kubra,https://www.sdge.com/residential/customer-service/outage-center/outage-map
+27,BGE,Baltimore Gas & Electric,Exelon,MD,1300,kubra,https://www.bge.com/outages/check-outage-status
+28,EVERSOURCE_CT,Eversource (Connecticut),Eversource Energy,CT,1300,kubra,https://outagemap.eversource.com/
+29,NV_ENERGY,NV Energy,Berkshire Hathaway Energy,NV,1300,kubra,https://www.nvenergy.com/outages/map
+30,NATGRID_MA,National Grid (Massachusetts),National Grid,MA,1300,kubra,https://www.nationalgridus.com/outages/
+31,AMEREN_IL,Ameren Illinois,Ameren,IL,1200,kubra,https://outagemap.ameren.com/
+32,AMEREN_MO,Ameren Missouri,Ameren,MO,1200,kubra,https://outagemap.ameren.com/
+33,PUGET,Puget Sound Energy,Puget Holdings,WA,1200,kubra,https://www.pse.com/en/outage/outage-map
+34,PACIFICORP_RMP,Rocky Mountain Power,Berkshire Hathaway Energy,"UT,WY,ID",1200,kubra,https://www.rockymountainpower.net/outages-safety/outages/outage-map.html
+35,WE_ENERGIES,We Energies,WEC Energy Group,WI,1200,kubra,https://www.we-energies.com/outages/outage-map
+36,AEP_TEXAS,AEP Texas,American Electric Power,TX,1100,kubra,https://www.aeptexas.com/outages/map
+37,ENTERGY_LA,Entergy Louisiana,Entergy,LA,1100,kubra,https://www.entergy.com/outages/
+38,FE_JCPL,Jersey Central Power & Light,FirstEnergy,NJ,1100,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+39,FE_OHIO_EDISON,Ohio Edison,FirstEnergy,OH,1100,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+40,LIPA,PSEG Long Island,LIPA,NY,1100,kubra,https://www.psegliny.com/outages
+41,SRP,Salt River Project,Public power,AZ,1100,arcgis,https://www.srpnet.com/outages/map
+42,APCO,Appalachian Power,American Electric Power,"VA,WV,TN",1000,kubra,https://www.appalachianpower.com/outages/map
+43,PORTLAND_GE,Portland General Electric,PGE,OR,950,kubra,https://portlandgeneral.com/outages/outage-map
+44,CPS_ENERGY,CPS Energy,Municipal (San Antonio),TX,920,kubra,https://outagemap.cpsenergy.com/
+45,AVANGRID_NYSEG,New York State Electric & Gas (NYSEG),Avangrid,NY,900,kubra,https://www.nyseg.com/outages
+46,OG_E,Oklahoma Gas & Electric (OG&E),OGE Energy,"OK,AR",900,kubra,https://www.oge.com/wps/portal/ord/outages/outage-map
+47,PEPCO,Pepco,Exelon,"DC,MD",900,kubra,https://www.pepco.com/outages/check-outage-status
+48,DUKE_INDIANA,Duke Energy Indiana,Duke Energy,IN,880,kubra,https://www.duke-energy.com/outages/current-outages
+49,DOMINION_OH,Duke Energy Ohio,Duke Energy,"OH,KY",870,kubra,https://www.duke-energy.com/outages/current-outages
+50,KCPL_EVERGY_MO,Evergy (Missouri),Evergy,MO,850,kubra,https://www.evergy.com/outages/view-outages
+51,EMERA_TAMPA,Tampa Electric (TECO),Emera,FL,830,kubra,https://www.tampaelectric.com/outage/
+52,MIDAMERICAN,MidAmerican Energy,Berkshire Hathaway Energy,"IA,IL,SD,NE",800,kubra,https://www.midamericanenergy.com/outage-map
+53,PSNC_PIEDMONT,Dominion Energy South Carolina,Dominion Energy,SC,780,kubra,https://outagemap.dominionenergy.com/
+54,PACIFICORP_PP,Pacific Power,Berkshire Hathaway Energy,"OR,WA,CA",780,kubra,https://www.pacificpower.net/outages-safety/outages/outage-map.html
+55,FE_CEI,Cleveland Electric Illuminating,FirstEnergy,OH,750,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+56,WESTAR_EVERGY_KS,Evergy (Kansas),Evergy,KS,750,kubra,https://www.evergy.com/outages/view-outages
+57,ENTERGY_AR,Entergy Arkansas,Entergy,AR,730,kubra,https://www.entergy.com/outages/
+58,FE_PPL_WPP,West Penn Power,FirstEnergy,PA,730,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+59,SMUD,Sacramento Municipal Utility District,Public power,CA,660,arcgis,https://www.smud.org/Outages
+60,AVANGRID_CMP,Central Maine Power,Avangrid,ME,650,kubra,https://www.cmpco.com/outages
+61,IDAHO_POWER,Idaho Power,IDACORP,"ID,OR",630,arcgis,https://www.idahopower.com/outages-safety/outages/outage-map/
+62,I_AND_M,Indiana Michigan Power,American Electric Power,"IN,MI",600,kubra,https://www.indianamichiganpower.com/outages/map
+63,NPPD,Nebraska Public Power District,Public power,NE,600,arcgis,https://www.nppd.com/outages
+64,FE_PENELEC,Pennsylvania Electric (Penelec),FirstEnergy,PA,600,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+65,FE_METED,Metropolitan Edison (Met-Ed),FirstEnergy,PA,580,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+66,PSO,Public Service Co of Oklahoma,American Electric Power,OK,580,kubra,https://www.psoklahoma.com/outages/map
+67,ACE,Atlantic City Electric,Exelon,NJ,560,kubra,https://www.atlanticcityelectric.com/outages/check-outage-status
+68,AUSTIN_ENERGY,Austin Energy,Municipal,TX,560,arcgis,https://outagemap.austinenergy.com/
+69,KU,Kentucky Utilities,PPL Corp,"KY,VA",560,kubra,https://lge-ku.com/outages
+70,SOCALGAS_NA,PNM (Public Service Co of New Mexico),TXNM Energy,NM,540,kubra,https://www.pnm.com/outage-center
+71,SWEPCO,Southwestern Electric Power,American Electric Power,"AR,LA,TX",540,kubra,https://www.swepco.com/outages/map
+72,DELMARVA,Delmarva Power,Exelon,"DE,MD",530,kubra,https://www.delmarva.com/outages/check-outage-status
+73,EVERSOURCE_NH,Eversource (New Hampshire),Eversource Energy,NH,530,kubra,https://outagemap.eversource.com/
+74,ENTERGY_TX,Entergy Texas,Entergy,TX,510,kubra,https://www.entergy.com/outages/
+75,ALLIANT_IA,Alliant Energy (Interstate Power & Light),Alliant Energy,"IA,MN",500,kubra,https://www.alliantenergy.com/outage
+76,ALLIANT_WI,Alliant Energy (Wisconsin Power & Light),Alliant Energy,WI,500,kubra,https://www.alliantenergy.com/outage
+77,JEA,JEA,Municipal (Jacksonville),FL,500,arcgis,https://www.jea.com/outages/
+78,NIPSCO,Northern Indiana Public Service (NIPSCO),NiSource,IN,480,kubra,https://www.nipsco.com/outages
+79,SEATTLE_CITY,Seattle City Light,Municipal,WA,480,arcgis,https://www.seattle.gov/city-light/outages
+80,GULF_POWER,Florida Power & Light (Northwest FL),NextEra Energy,FL,470,kubra,https://www.fpl.com/outages/power-tracker.html
+81,EL_PASO,El Paso Electric,JP Morgan IIF,"TX,NM",460,kubra,https://www.epelectric.com/outages
+82,ENTERGY_MS,Entergy Mississippi,Entergy,MS,460,kubra,https://www.entergy.com/outages/
+83,WPS,Wisconsin Public Service,WEC Energy Group,WI,460,kubra,https://www.wisconsinpublicservice.com/outages/outage-map
+84,TUCSON,Tucson Electric Power,Fortis,AZ,450,kubra,https://www.tep.com/outage-center/
+85,LGE,Louisville Gas & Electric,PPL Corp,KY,430,kubra,https://lge-ku.com/outages
+86,TVA_MLGW,Memphis Light Gas & Water,Municipal (TVA),TN,430,arcgis,https://www.mlgw.com/outages
+87,FE_POTOMAC,Potomac Edison,FirstEnergy,"MD,WV",430,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+88,OPPD,Omaha Public Power District,Public power,NE,420,arcgis,https://www.oppd.com/outages-safety/view-outage-map/
+89,AVISTA,Avista Utilities,Avista Corp,"WA,ID",410,kubra,https://www.myavista.com/outages/outage-map
+90,FE_MON_POWER,Mon Power,FirstEnergy,WV,400,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+91,AVANGRID_RGE,Rochester Gas & Electric,Avangrid,NY,380,kubra,https://www.rge.com/outages
+92,PEDERNALES,Pedernales Electric Cooperative,Cooperative,TX,360,kubra,https://www.pec.coop/outage-center/
+93,AVANGRID_UI,United Illuminating,Avangrid,CT,340,kubra,https://www.uinet.com/outages
+94,FE_TOLEDO,Toledo Edison,FirstEnergy,OH,320,kubra,https://www.firstenergycorp.com/outages/outage_map.html
+95,CLECO,Cleco Power,Cleco,LA,290,kubra,https://www.cleco.com/outage-center
+96,PNM_TNMP,Texas-New Mexico Power,TXNM Energy,TX,270,kubra,https://www.tnmp.com/outages
+97,OUC,Orlando Utilities Commission,Municipal,FL,260,kubra,https://www.ouc.com/account-services/outages
+98,ENTERGY_NO,Entergy New Orleans,Entergy,LA,210,kubra,https://www.entergy.com/outages/
+99,SANTEE_COOPER,Santee Cooper,Public power,SC,210,kubra,https://www.santeecooper.com/outages/
+100,MISSISSIPPI_POWER,Mississippi Power,Southern Company,MS,190,kubra,https://www.outagemap.mississippipower.com/
+101,SOUTH_RIVER_EMC,Sawnee EMC,Cooperative,GA,190,kubra,https://www.sawnee.com/outages
+102,KENTUCKY_POWER,Kentucky Power,American Electric Power,KY,165,kubra,https://www.kentuckypower.com/outages/map
+103,UNITIL,Unitil,Unitil Corp,"NH,MA,ME",110,kubra,https://www.unitil.com/outages
+104,BLUE_RIDGE_EMC,Blue Ridge Energy,Cooperative,NC,80,kubra,https://www.blueridgeenergy.com/outages

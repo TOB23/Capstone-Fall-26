@@ -11,7 +11,7 @@ from pathlib import Path
 # This is a standalone repo, separate from Capstone2026. Set PROJECT_URL to the
 # new repo once it exists.
 CONTACT_EMAIL = "tob3@illinois.edu"
-PROJECT_URL = "https://github.com/TOB23/Capstone-Fall-26"
+PROJECT_URL = "https://github.com/TOB23/outage-verification"
 USER_AGENT = (
     f"Capstone2026-OutageVerification/1.0 "
     f"(academic research; {PROJECT_URL}; mailto:{CONTACT_EMAIL})"
@@ -35,7 +35,7 @@ SNAPSHOT_DIR = DATA_DIR / "snapshots"        # raw per-pass scrapes (parquet)
 AGGREGATED_DIR = DATA_DIR / "county"         # county-aggregated, EAGLE-I-shaped
 REGISTRY_PATH = ROOT / "registry.json"
 # Census cartographic county boundaries (download + unzip into data/counties/).
-COUNTY_SHAPEFILE = DATA_DIR / "counties" / "cb_2023_us_county_500k.shp"
+COUNTY_SHAPEFILE = DATA_DIR / "counties" / "cb_2025_us_county_500k.shp"
 
 for _d in (DATA_DIR, SNAPSHOT_DIR, AGGREGATED_DIR):
     _d.mkdir(parents=True, exist_ok=True)

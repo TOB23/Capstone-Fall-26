@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from Code.base import build_session
+from base import build_session
 from config import REQUEST_TIMEOUT
 
 KUBRA_SIGNATURES = ("kubra.io", "kubra", "stormcenter")

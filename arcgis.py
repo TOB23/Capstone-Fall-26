@@ -21,7 +21,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 
-from Code.base import OutageAdapter, OutageRecord
+from base import OutageAdapter, OutageRecord
 
 
 class ArcGISAdapter(OutageAdapter):
