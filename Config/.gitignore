@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Large downloadable input: the Census county shapefile
+data/counties/
+
+# Collected data and logs stay LOCAL — they are large, grow continuously, and
+# git would keep every version forever. Back them up by copying the data/
+# folder, not by committing it.
+data/snapshots/
+data/county/
+logs/

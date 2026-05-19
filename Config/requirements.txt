@@ -1,0 +1,9 @@
+# Collector only (collector.py, the adapters): lightweight, runs anywhere.
+requests>=2.31
+pandas>=2.0
+pyarrow>=14.0
+
+# County aggregation + cross-check (county_aggregate.py, crosscheck.py).
+# geopandas pulls in shapely/pyproj/fiona; install in your `capstone` env.
+geopandas>=0.14
+shapely>=2.0

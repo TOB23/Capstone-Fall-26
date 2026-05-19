@@ -1,0 +1,33 @@
+[
+  {
+    "utility_id": "TEMPLATE_KUBRA",
+    "utility_name": "Example utility on KUBRA Storm Center",
+    "platform": "kubra",
+    "states": ["XX"],
+    "customers_served": 0,
+    "enabled": false,
+    "_comment": "Discover metadata_url and tile_url_template via browser DevTools -> Network on the utility's outage map. {data_dir} and {quadkey} are filled in by the adapter. seed_quadkeys should bound the service territory; omit to scan from zoom 1.",
+    "config": {
+      "metadata_url": "https://CHANGE-ME.kubra.io/stormcenter/api/v1/.../metadata.json",
+      "tile_url_template": "https://CHANGE-ME.kubra.io/data/{data_dir}/public/cluster-1/{quadkey}.json",
+      "min_zoom": 1,
+      "max_zoom": 14,
+      "seed_quadkeys": ["032", "033"]
+    }
+  },
+  {
+    "utility_id": "TEMPLATE_ARCGIS",
+    "utility_name": "Example utility on an ArcGIS feature layer",
+    "platform": "arcgis",
+    "states": ["XX"],
+    "customers_served": 0,
+    "enabled": false,
+    "_comment": "service_url is everything up to (not including) /query. Confirm customers_field by opening the layer URL in a browser and reading the field list.",
+    "config": {
+      "service_url": "https://CHANGE-ME/arcgis/rest/services/OutageMap/MapServer/0",
+      "customers_field": "CustomersAffected",
+      "where": "1=1",
+      "id_field": "OBJECTID"
+    }
+  }
+]
